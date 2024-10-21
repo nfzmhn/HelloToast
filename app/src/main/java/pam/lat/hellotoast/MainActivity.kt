@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
         val buttonSwitchPage = findViewById<Button>(R.id.button_switchpage)
         val buttonBrowser = findViewById<Button>(R.id.button_browser)
         val nameObserver = Observer<Int> { newName ->
-            // Update the UI, in this case, a TextView.
             mShowCount.text = newName.toString()
         }
         model.currentName.observe(this, nameObserver)
+        mCount = model.currentName.value ?: 0
 
         buttonCountUp.setOnClickListener(View.OnClickListener {
            mCount++

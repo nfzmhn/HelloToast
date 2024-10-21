@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class NameViewModel : ViewModel() {
-    val currentName: MutableLiveData<String> by lazy {
-        MutableLiveData<String>()
+    val currentName: MutableLiveData<Int> by lazy {
+        MutableLiveData<Int>()
     }
 }
